@@ -27,10 +27,18 @@ function Header () {
          className='app__header-info'
          > 
          <div className="social__icons">
-            <TfiLinkedin className="social__icons-icon"></TfiLinkedin>
-            <GrGithub className="social__icons-icon"></GrGithub>
-            <TfiEmail className="social__icons-icon"></TfiEmail>
-            <TfiInstagram className="social__icons-icon"></TfiInstagram>
+            <a className="social__icons-icon" href="https://www.linkedin.com/in/ivan-tarquini-5b987022b/">
+                <TfiLinkedin ></TfiLinkedin>
+            </a>
+            <a href="https://github.com/OrnluX" className="social__icons-icon">
+                <GrGithub></GrGithub>
+            </a>
+            <a href="mailto:ivantarquini91@gmail.com" className="social__icons-icon">
+                <TfiEmail></TfiEmail>
+            </a>
+            <a href="https://www.instagram.com/l.enfant.sauvage_/" className="social__icons-icon">
+                <TfiInstagram></TfiInstagram>
+            </a>
          </div>
          <div className="app__header-badge">
             <div className="badge-cmp app__flex">
