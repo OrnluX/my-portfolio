@@ -1,0 +1,231 @@
+#home {
+    position: relative;
+    background: url('../../assets/bgIMG.png');
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: center;
+    .app__wrapper {
+        padding: 0;
+
+        .copyright {
+            display: none;
+        }
+    }
+}
+
+h1 {
+    font-size: var(--xxl);
+    font-weight: 500;
+    text-align: center;
+
+    @media screen and (max-width: 450px) {
+        font-size: var(--xl);
+    }
+}
+
+.app__header {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+
+    padding: 10rem 3.6rem 0;
+
+    @media screen and (max-width: 1200px) {
+        flex-direction: column;
+    }
+
+    @media screen and (max-width: 450px) {
+        padding: 12rem 1.8rem 3.6rem;
+    }
+}
+
+.app__header-info {
+    flex: 0.65;
+    display: flex;
+    justify-content: space-evenly;
+    height: 100%;
+
+    @media screen and (max-width: 1999px) {
+        width: 100%;
+        margin-right: 0rem;
+    }
+}
+.social__icons {
+    width: 10%;
+    font-size: var(--l);
+    display: flex;
+    flex: 0.7;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--md);
+
+    .social__icons-icon {
+        color: var(--green-color);
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            color: var(--gray);
+            transform: scale(1.1);
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}
+
+.app__header-badge {
+    width: 90%;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+
+    .badge-cmp, .tag-cmp {
+        padding: 1.8rem 2.4rem;
+        margin-right: var(--xl);
+        border-radius: var(--md);
+        flex-direction: row;
+        width: auto;
+        min-width: 24rem;
+        box-shadow: 0 0 2rem rgba(0, 0, 0, 0.4);
+        
+        @media screen and (max-width: 1199px) {
+            margin-right: unset;
+        }
+    }
+
+    .tag-cmp {
+        flex-direction: column;
+        margin-top: var(--xl);
+
+        p {
+            width: 100%;
+            text-align: right;
+        }
+    }
+
+    .badge-cmp {
+        span {
+            font-size: var(--xxl);
+            animation: greet 1.5s infinite;
+            animation-delay: 1s;
+        }
+
+        @keyframes greet {
+           0% {
+            transform: rotate(0deg);
+           }
+           50% {
+            transform: rotate(60deg);
+           }
+           100% {
+            transform: rotate(0deg);
+           }
+        }
+    }
+    
+    @media screen and (min-width: 1200px) {
+        margin-left: var(--md);
+    }
+}
+
+.app__header-circles {
+    flex: 0.75;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    height: 100%;
+    margin-left: 1.8rem;
+
+    div {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: var(--lightGray-color);
+        box-shadow: 0 0 2rem rgba(0, 0, 0, 0.4);
+        transition: all 0.5s ease;
+
+        img {
+            width: 60%;
+            height: 60%;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+            transition: all 0.5s ease;
+        }
+    }
+
+    div:nth-child(1){
+        width: 100px;
+        height: 100px;
+    }
+    div:nth-child(2){
+        margin: var(--l);
+        width: 150px;
+        height: 150px;
+    }
+    div:nth-child(3){
+        width: 70px;
+        height: 70px;
+    }
+
+    @media screen and (min-width:2000px){
+        div:nth-child(1){
+            width: 400;
+            height: 400;
+        }
+        div:nth-child(2){
+            margin: var(--l);
+            width: 170px;
+            height: 170px;
+        }
+        div:nth-child(3){
+            width: 200px;
+            height: 200px;
+        }
+    }
+
+    @media screen and (max-width: 1199px){
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: 0; 
+
+        div {
+            margin: 1.8rem;
+        }
+    }
+}
+
+.app__header-img {
+    
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        max-width: 600px;
+        object-fit: contain;
+        z-index: 1;
+    }
+
+    .overlay_circle {
+        position: absolute;
+        left: 0;
+        right:0;
+        bottom: 0;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    @media screen and (max-width: 1200px){
+        margin: var(--md) 0;
+    }
+}
