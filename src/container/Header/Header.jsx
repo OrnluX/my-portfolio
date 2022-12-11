@@ -27,7 +27,7 @@ function Header () {
          className='app__header-info'
          > 
          <div className="social__icons">
-            <a className="social__icons-icon" href="https://www.linkedin.com/in/ivan-tarquini-5b987022b/">
+            <a className="social__icons-icon" href="https://www.linkedin.com/in/sergio-ivan-tarquini/">
                 <TfiLinkedin ></TfiLinkedin>
             </a>
             <a href="https://github.com/OrnluX" className="social__icons-icon">
